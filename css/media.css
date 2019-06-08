@@ -1,0 +1,139 @@
+.container{
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.container-p120{
+    padding: 0 120px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    padding: 0 0;
+    text-align: center;
+    margin: 16px 16px; 
+    box-sizing: border-box;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .c15{
+        width: calc(100% - 32px);
+    }
+
+    .c12{
+        width: calc(100% - 32px);
+    }
+
+    .c9{
+        width: calc(100% - 32px);
+    }
+
+    .c6{
+        width: calc(100% - 32px);
+    }
+
+    .c4{
+        width: calc(100% - 32px);
+    }
+
+    .item{
+        padding: 0;
+    }
+
+    .pc{
+        display: none;
+    }
+}
+     
+@media screen and (min-width: 768px) {
+    .c15{
+        width: calc(100% / 60 * 6 - 32px);
+        margin: 0 32px;
+    }
+
+    .c12{
+        width: calc(100% / 18 * 6 - 32px);
+    }
+
+    .c9{
+        width: calc(100% / 12 * 4 - 32px);
+    }
+
+    .c6{
+        width: calc(100% / 6 * 6 - 32px);
+    }
+
+    .c4{
+        width: calc(100% / 6 * 3 - 32px);
+    }
+
+    .c2{
+        width: calc(100% / 4 * 6 - 32px);
+    }
+
+    .mb{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .c15{
+        width: calc(100% / 60 * 6 - 32px);
+        margin: 0 32px;
+    }
+
+    .c12{
+        width: calc(100% / 18 * 3 - 32px);
+    }
+
+    .c9{
+        width: calc(100% / 12 * 4 - 32px);
+    }
+
+    .c6{
+        width: calc(100% / 9 * 4);
+    }
+    
+    .row{
+        justify-content: center;
+    }
+
+    .c4{
+        width: calc(100% / 8 * 2);
+    }
+
+    .c2{
+        width: calc(100%);
+    }
+}
+
+@media screen and (min-width: 1920px){
+    .container{
+        max-width: 1920px;
+        padding: 0px 120px;
+    }
+
+    .c6{
+        width: calc(100% / 9 * 3);
+    }
+
+    .c2{
+        width: calc(100% / 9 * 3);
+    }
+}
