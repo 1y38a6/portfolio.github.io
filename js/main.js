@@ -1,11 +1,25 @@
 function focusHere(){
-    console.log("Open");
     $(".loading-screen").addClass("loading-screen-close");
 }
 
-var day = true;
+var day = true, menu = false;
 var toggledn = document.getElementById('daynighttoogle');
 var lastScroll;
+
+function MenuToggle(){
+    if(!menu){
+        $('.l1').addClass("la1");
+        $('.l2').addClass("la2");
+        $('.l3').addClass("la3");
+        $('.menu').removeClass("hidden");
+    }else{
+        $('.l1').removeClass("la1");
+        $('.l2').removeClass("la2");
+        $('.l3').removeClass("la3");
+        $('.menu').addClass("hidden");
+    }
+    menu = !menu;
+}
 
 $(function(){
     document.body.addEventListener('mouseenter', focusHere);
@@ -19,6 +33,8 @@ $(function(){
 
     $(".port").mouseenter(function(e){OpenSite(e)});
     $(".port").mouseleave(function(e){CloseSite(e)});
+
+    $(".menu-toggle").bind("click", MenuToggle);
     
 });
 
@@ -44,11 +60,18 @@ function DayNightToggle(){
         $('header').addClass('header-night');
         $(".promo").addClass('header-night');
         $(".fullscreen").addClass("light-bg");
+        $(".menu").addClass("header-night");
 
         var nihElems = document.getElementsByClassName("tac");
 
         for(var a = 0; a< nihElems.length; a++){
             nihElems[a].classList.add("white-text");
+        }
+
+        var nihElems = document.getElementsByClassName("line");
+
+        for(var a = 0; a< nihElems.length; a++){
+            nihElems[a].classList.add("dark-loading-cube");
         }
 
         var nihElems = document.getElementsByClassName("btn");
@@ -121,11 +144,18 @@ function DayNightToggle(){
         $('header').removeClass('header-night');
         $(".promo").removeClass('header-night');
         $(".fullscreen").removeClass("light-bg");
+        $(".menu").removeClass("header-night");
 
         var nihElems = document.getElementsByClassName("btn");
 
         for(var a = 0; a< nihElems.length; a++){
             nihElems[a].classList.remove("btn-n");
+        }
+
+        var nihElems = document.getElementsByClassName("line");
+
+        for(var a = 0; a< nihElems.length; a++){
+            nihElems[a].classList.remove("dark-loading-cube");
         }
 
         var nihElems = document.getElementsByClassName("logoname");
