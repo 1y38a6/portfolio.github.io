@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="css/style.css">
@@ -15,34 +15,48 @@
 <body>
     <header>
         <div class="container">
-            <div class="pc">
-                <div class="row">
-                    <div class="c12">
-                        <p class="menu-item">Главная</p>
-                    </div>
-                    <div class="c12">
-                        <p class="menu-item">Технологии</p>
-                    </div>
-                    <div class="c12">
-                        <p class="menu-item">Портфолио</p>
-                    </div>
-                    <div class="c12">
-                        <p class="menu-item">Обо мне</p>
-                    </div>
-                    <div class="c12">
-                        <p class="menu-item">Контакты</p>
-                    </div>
-                    <div class="c12" >
-                        <div onclick="DayNightToggle()" id="daynighttoogle" class="daynighttoogle active">
-                            <p class="stars animated fadeOut"></p>
-                            <div id="spotlight" class="spotlight active">
-                                <p id="moon" class="sunmoon animated zoomIn"></p>
-                                <p id="sun" class="sunmoon sun"></p>
-                            </div>
-                            <p class="cloud animated fadeInLeft"></p>
+            <div class="row">
+
+                <div class="c12 pc">
+                    <p class="menu-item">Главная</p>
+                </div>
+                <div class="c12 pc">
+                    <p class="menu-item">Технологии</p>
+                </div>
+                <div class="c12 pc">
+                    <p class="menu-item">Портфолио</p>
+                </div>
+                <div class="c12 pc">
+                    <p class="menu-item">Обо мне</p>
+                </div>
+                <div class="c12 pc">
+                    <p class="menu-item">Контакты</p>
+                </div>
+
+                <div class="c12" >
+                    <div onclick="DayNightToggle()" id="daynighttoogle" class="mb-daynight daynighttoogle active">
+                        <p class="stars animated fadeOut"></p>
+                        <div id="spotlight" class="spotlight active">
+                            <p id="moon" class="sunmoon animated zoomIn"></p>
+                            <p id="sun" class="sunmoon sun"></p>
                         </div>
+                        <p class="cloud animated fadeInLeft"></p>
                     </div>
                 </div>
+                
+                <div class="menu-toggle mb">
+                    <p class="line l1"></p>
+                    <p class="line l2"></p>
+                    <p class="line l3"></p>
+                </div>
+            </div>
+
+            <div class="mb menu hidden">
+                <p class="menu-item">Главная</p>
+                <p class="menu-item">Технологии</p>
+                <p class="menu-item">Портфолио</p>
+                <p class="menu-item">Обо мне</p>
+                <p class="menu-item">Контакты</p>
             </div>
         </div>
     </header>
@@ -68,7 +82,7 @@
 
     <section class="promo">
         <div class="container">
-            <div class="row">
+            <div class="row pc">
                 <div data-aos="zoom-in" data-aos-delay="1000" class="c15">
                     <p class="logoname">HTML</p>
                     <img class="logos" src="img/html.svg" alt="" srcset="">
@@ -137,6 +151,76 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row mb">
+                <div data-aos="zoom-in" class="c15">
+                    <p class="logoname">HTML</p>
+                    <img class="logos" src="img/html.svg" alt="" srcset="">
+                    <div class="logo-disctription tac logo-close">
+                        <p>
+                            Браузеры прекрасно понимают html и могут интерпретировать 
+                            его в понятном виде. 
+                            Вообще любая страница сайта — это html-код, который 
+                            браузер переводит в дружественный вид для пользователя. 
+                            Кстати, код любой страницы является доступным для всех. 
+                            Для его просмотра щелкните правой кнопкой мыши и 
+                            выберите посмотреть исходных код или нажмите на 
+                            клавиатуре CTRL+U.
+                        </p>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="c15">
+                    <p class="logoname">CSS</p>
+                    <img class="logos" src="img/css.svg" alt="" srcset="">
+                    <div class="logo-disctription tac logo-close">
+                        <p>
+                            СSS- Cascading Style Sheets (каскадные таблицы стилей) — 
+                            это ещё один язык программирования, называемый ещё 
+                            формальным языком, который применяется для описания 
+                            внешнего вида документа, написанного с использованием 
+                            языка гипертекстовой разметки, то есть HTML.
+                        </p>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400" class="c15">
+                    <p class="logoname">JS</p>
+                    <img class="logos" src="img/js.svg" alt="" srcset="">
+                    <div class="logo-disctription tac logo-close">
+                        <p>
+                            HTML и CSS — фундамент веб-программирования, но помимо его существует много дополнительных веб-инструментов, например JavaScript.
+                            В основном, с помощью JS, а именно JQ, разрабатываются дополнительные элементы для сайта. Вы могли неоднократно видеть набор слайдеров на сайте, интерактивные карты, даже калькуляторы для продающих сайтов, всё это делается при помощи JavaScript.
+                        </p>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="600" class="c15">
+                    <p class="logoname">JQuery</p>
+                    <img class="logos" src="img/jq.svg" alt="" srcset="">
+                    <div class="logo-disctription tac logo-close">
+                        <p>
+                            JQuery - это фреймворк на основе javascript, оптимизированный на удобство, стабильность и кроссбраузерность. По сути, с его помощью можно сделать все то же самое, что с javascript, но требуется меньше усилий.
+                        </p>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="800" class="c15">
+                    <p class="logoname">PHP</p>
+                    <img class="logos" src="img/php.svg" alt="" srcset="">
+                    <div class="logo-disctription tac logo-close">
+                        <p>
+                            PHP - это самый популярный язык программирования для «серверной» стороны веб-сайтов. Был и остаётся самым распространенным языком, на котором пишутся «движки» для сайтов. Секрет успеха прост: наличие готовых функций для общения с базами данных и обработки сетевых запросов.
+                        </p>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="1000" class="c15">
+                    <p class="logoname">WP</p>
+                    <img class="logos" src="img/wp.svg" alt="" srcset="">
+                    <div class="logo-disctription tac logo-close">
+                        <p>
+                            WordPress – набор скриптов объединённых в одну общую систему под названием WordPress. Сам по себе WordPress мало значим для обычного пользователя без визуальной составляющей (дизайна) и плагинов.
+                            Ещё проще, WordPress – это скелет на который одеваются мускулы в виде различных дополнительных модулей — плагинов и придаётся внешний вид в виде дизайнерских решений шаблонов и тем.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -151,7 +235,7 @@
                         и без знаний кода менять содержимое своего сайта!
                     </h3>
                 </div>
-                <div data-aos="zoom-in" class="c6">
+                <div data-aos="zoom-in" class="c6 mb-mar">
                     <img class="web-link" src="img/web.jpg" alt="">
                     <p class="underimg">пример веб-сайта</p>
                 </div>
@@ -206,7 +290,7 @@
     <section class="techno">
         <div class="container">
             <div class="row">
-                <div data-aos="zoom-in" class="c6">
+                <div data-aos="zoom-in" class="c6 mb-mar">
                     <img src="img/game2.jpg" alt="">
                     <p class="underimg">пример прототипа игры</p>
                 </div>
@@ -293,7 +377,10 @@
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="400" class="c9">
-                    <img src="img/site3.png" alt="">
+                    <img class="port" src="img/mem.png" alt="">
+                    <div class="fullscreen close inv">
+                        <video class="vid" muted loop src="videos/memio.mp4"></video>
+                    </div>
                 </div>
             </div>
             <div class="row">
