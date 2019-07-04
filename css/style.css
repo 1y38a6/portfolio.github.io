@@ -303,6 +303,17 @@ h2{
     transition: 500ms ease-in-out;
 }
 
+.c-ico{
+    transform: translateY(18px);
+    width: 48px !important;
+    height: auto;
+    box-shadow: none !important;
+}
+
+.line-h{
+    line-height: 2em;
+}
+
 .tal{
     text-align: left;
 
