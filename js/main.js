@@ -22,6 +22,7 @@ function MenuToggle(){
 }
 
 $(function(){
+    ScrollTo("main");
     document.body.addEventListener('mouseenter', focusHere);
     document.body.addEventListener('click', focusHere);
 
@@ -35,6 +36,38 @@ $(function(){
     $(".port").mouseleave(function(e){CloseSite(e)});
 
     $(".menu-toggle").bind("click", MenuToggle);
+
+    var nihElems = document.getElementsByClassName("main-link");
+
+    for(var a = 0; a< nihElems.length; a++){
+        $(nihElems[a]).bind("click", ScrollToMain);
+    }
+
+    var nihElems = document.getElementsByClassName("techno-link");
+
+    for(var a = 0; a< nihElems.length; a++){
+        $(nihElems[a]).bind("click", ScrollToTechno);
+    }
+
+    var nihElems = document.getElementsByClassName("port-link");
+
+    for(var a = 0; a< nihElems.length; a++){
+        $(nihElems[a]).bind("click", ScrollToPortfolio);
+    }
+
+    var nihElems = document.getElementsByClassName("about-link");
+
+    for(var a = 0; a< nihElems.length; a++){
+        $(nihElems[a]).bind("click", ScrollToAbout);
+    }
+
+    var nihElems = document.getElementsByClassName("contact-link");
+
+    for(var a = 0; a< nihElems.length; a++){
+        $(nihElems[a]).bind("click", ScrollToContact);
+    }
+
+    $(".closeButton").bind("click", closeFullscreen);
     
 });
 
@@ -251,4 +284,30 @@ function CloseSite(event){
 
     var target = $(event.target).next().children();
     target.get(0).pause();
+}
+
+function ScrollToMain(){
+    ScrollTo("main");
+}
+
+function ScrollToTechno(){
+    ScrollTo("techno");
+}
+
+function ScrollToPortfolio(){
+    ScrollTo("portfolio");
+}
+
+function ScrollToAbout(){
+    ScrollTo("about");
+}
+
+function ScrollToContact(){
+    ScrollTo("contact");
+}
+
+function ScrollTo(element){
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#" + element).offset().top
+    }, 1000);
 }
